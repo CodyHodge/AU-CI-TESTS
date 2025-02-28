@@ -18,13 +18,13 @@ try
     }catch{
       const htmlReport = createHtmlReport({
         results: results,
-        options:{outputDir:'/'}
+        options:{outputDir: 'axe-results'}
         
     })
     
-    await testInfo.attach('results',{
-        path: './accessibilityReport.html' 
-    })
+     await testInfo.attach('results',{
+        path: 'axe-results/accessibilityReport.html' 
+     })
     }
     
 page.close();

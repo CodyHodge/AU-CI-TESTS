@@ -25,5 +25,5 @@ jobs:
       if: ${{ !cancelled() }}
       with:
         name: accessibilityReport.html
-        path: /
+        path: axe-results/
         retention-days: 30
