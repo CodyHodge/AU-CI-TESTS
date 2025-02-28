@@ -7,7 +7,7 @@ import { createHtmlReport } from "axe-html-reporter";
 
 // build or go to page
 await page.goto('https://playwright.dev/docs/ci-intro');
-await page.locator('.navbar__title text--truncate').first().waitFor();
+await page.getByRole('heading', { name: 'Setting up CI' }).waitFor();
 // run axe builder on the page
 const results = await new AxeBuilder({ page }).withTags(['best-practice','wcag2a','wcag2aa','wcag21a','wcag21aa']).analyze();
 //expect(results.violations).toEqual([]);
