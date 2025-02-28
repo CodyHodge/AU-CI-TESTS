@@ -15,6 +15,10 @@ jobs:
       run: npm ci
     - name: Install Playwright Browsers
       run: npx playwright install --with-deps
+    - name: Install Axe
+      run: npm install @axe-core/playwright
+    - name: Install HTML Reporter
+      run:  npm install axe-html-reporter
     - name: Run Playwright tests
       run: npx playwright test
     - uses: actions/upload-artifact@v4

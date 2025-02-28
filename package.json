@@ -12,6 +12,7 @@
     "@types/node": "^22.13.5"
   },
   "dependencies": {
-    "@axe-core/playwright": "^4.10.1"
+    "@axe-core/playwright": "^4.10.1",
+    "axe-html-reporter": "^2.2.11"
   }
 }

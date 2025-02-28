@@ -32,11 +32,12 @@ export default defineConfig({
     trace: 'on-first-retry',
   },
 
-  /* Configure projects for major browsers */
+  // /* Configure projects for major browsers */
   projects: [
     {
-      name: 'chromium',
+      name: 'Axe',
       use: { ...devices['Desktop Chrome'] },
+      testMatch: 'Axe.ts'
     },
 
     // {
