@@ -6,7 +6,7 @@ import { createHtmlReport } from "axe-html-reporter";
  test('Axe check', async ({ page },testInfo) => {
 
 // build or go to page
-await page.goto('https://cwsqa.auburn.edu/aubie/');
+await page.goto('https://playwright.dev/docs/ci-intro');
 await page.locator('.d-print-none').first().waitFor();
 // run axe builder on the page
 const results = await new AxeBuilder({ page }).withTags(['best-practice','wcag2a','wcag2aa','wcag21a','wcag21aa']).analyze();
