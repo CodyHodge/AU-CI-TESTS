@@ -7,8 +7,17 @@ jobs:
     timeout-minutes: 60
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v4
-    - uses: actions/setup-node@v4
+    - name: Checkout Playwright
+      uses: actions/checkout@v4
+
+    - name: Checkout Repo
+      uses: action/checkout@master
+      with:
+        repository: CodyHodge/AU-CI-Test 
+        path: AU-CI-Test 
+
+   - name: Use node 
+      uses: actions/setup-node@v4
       with:
         node-version: lts/*
     - name: Install dependencies
